@@ -14,7 +14,7 @@ class TextFieldStyles {
   double height;
   EdgeInsets padding;
 
-  static final Map<BaseSize, TextFieldStyles> _textFieldStyles = {
+  static final Map<BaseSize, TextFieldStyles> _styles = {
     BaseSize.sm: TextFieldStyles(
       labelFontSize: 14,
       fontSize: 14,
@@ -35,7 +35,7 @@ class TextFieldStyles {
     ),
   };
 
-  static TextFieldStyles getTextFieldProps(BaseSize str) {
-    return _textFieldStyles[str]!;
+  static TextFieldStyles getStyles(BaseSize str) {
+    return _styles[str]!;
   }
 }

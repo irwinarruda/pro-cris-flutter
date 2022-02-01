@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'ProCris App',
-      theme: proCrisThemeData,
+      theme: ProCrisTheme.theme,
       initialRoute: '/sign_in',
       routes: {
         '/sign_in': (BuildContext context) => SignIn(),

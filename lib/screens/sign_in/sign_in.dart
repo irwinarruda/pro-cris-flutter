@@ -4,6 +4,8 @@ import 'package:reactive_forms/reactive_forms.dart';
 
 import 'package:pro_cris_flutter/forms/sign_in_form.dart';
 
+import 'package:pro_cris_flutter/components/atoms/button.dart';
+import 'package:pro_cris_flutter/components/atoms/link.dart';
 import 'package:pro_cris_flutter/components/molecules/pro_cris_banner.dart';
 import 'package:pro_cris_flutter/components/molecules/form_text_field.dart';
 
@@ -53,11 +55,20 @@ class SignIn extends StatelessWidget with SignInForm {
                     formControlName: 'senha',
                     size: BaseSize.lg,
                   ),
-                  TextButton(
-                    onPressed: () {
-                      form.control('email').value = 'Qualquer coisa';
-                    },
-                    child: Text('Hello World'),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Button(
+                    text: 'Entrar',
+                    size: BaseSize.lg,
+                    onPressed: () {},
+                  ),
+                  SizedBox(
+                    height: 1,
+                  ),
+                  Link(
+                    text: 'Criar Conta',
+                    onPressed: () {},
                   ),
                 ],
               ),

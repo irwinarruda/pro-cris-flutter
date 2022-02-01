@@ -20,7 +20,6 @@ class FormTextField<T> extends StatelessWidget {
     this.textCapitalization = TextCapitalization.none,
     this.textInputAction,
     this.strutStyle,
-    this.textAlign = TextAlign.start,
     this.textAlignVertical,
     this.autofocus = false,
     this.readOnly = false,
@@ -67,68 +66,68 @@ class FormTextField<T> extends StatelessWidget {
     this.verticalDirection = VerticalDirection.down,
     this.textBaseline,
   }) : super(key: key) {
-    fieldStyles = TextFieldStyles.getTextFieldProps(size!);
+    fieldStyles = TextFieldStyles.getStyles(size!);
   }
 
   late TextFieldStyles fieldStyles;
 
-  String? label;
-  BaseSize? size;
-  Axis direction;
-  MainAxisAlignment mainAxisAlignment;
-  MainAxisSize mainAxisSize;
-  CrossAxisAlignment crossAxisAlignment;
-  TextDirection? textDirection;
-  VerticalDirection verticalDirection;
-  TextBaseline? textBaseline;
+  final String? label;
+  final BaseSize? size;
+  final Axis direction;
+  final MainAxisAlignment mainAxisAlignment;
+  final MainAxisSize mainAxisSize;
+  final CrossAxisAlignment crossAxisAlignment;
+  final TextDirection? textDirection;
+  final VerticalDirection verticalDirection;
+  final TextBaseline? textBaseline;
 
-  String formControlName;
-  ValidationMessagesFunction<T>? validationMessages;
-  ControlValueAccessor<T, String>? valueAccessor;
-  ShowErrorsFunction? showErrors;
-  TextInputType? keyboardType;
-  TextCapitalization textCapitalization;
-  TextInputAction? textInputAction;
-  StrutStyle? strutStyle;
-  TextAlign textAlign = TextAlign.start;
-  TextAlignVertical? textAlignVertical;
-  bool autofocus;
-  bool readOnly;
-  ToolbarOptions? toolbarOptions;
-  bool? showCursor;
-  bool obscureText;
-  String obscuringCharacter;
-  bool autocorrect;
-  SmartDashesType? smartDashesType;
-  SmartQuotesType? smartQuotesType;
-  bool enableSuggestions;
-  MaxLengthEnforcement? maxLengthEnforcement;
-  int? maxLines;
-  int? minLines;
-  bool expands;
-  int? maxLength;
-  GestureTapCallback? onTap;
-  VoidCallback? onEditingComplete;
-  List<TextInputFormatter>? inputFormatters;
-  double cursorWidth;
-  double? cursorHeight;
-  Radius? cursorRadius;
-  Color? cursorColor;
-  Brightness? keyboardAppearance;
-  EdgeInsets scrollPadding;
-  bool enableInteractiveSelection;
-  InputCounterWidgetBuilder? buildCounter;
-  ScrollPhysics? scrollPhysics;
-  VoidCallback? onSubmitted;
-  FocusNode? focusNode;
-  Iterable<String>? autofillHints;
-  MouseCursor? mouseCursor;
-  AppPrivateCommandCallback? onAppPrivateCommand;
-  String? restorationId;
-  ScrollController? scrollController;
-  TextSelectionControls? selectionControls;
-  TextEditingController? controller;
-  bool enableIMEPersonalizedLearning;
+  final String formControlName;
+  final ValidationMessagesFunction<T>? validationMessages;
+  final ControlValueAccessor<T, String>? valueAccessor;
+  final ShowErrorsFunction? showErrors;
+  final TextInputType? keyboardType;
+  final TextCapitalization textCapitalization;
+  final TextInputAction? textInputAction;
+  final StrutStyle? strutStyle;
+  final TextAlign textAlign = TextAlign.start;
+  final TextAlignVertical? textAlignVertical;
+  final bool autofocus;
+  final bool readOnly;
+  final ToolbarOptions? toolbarOptions;
+  final bool? showCursor;
+  final bool obscureText;
+  final String obscuringCharacter;
+  final bool autocorrect;
+  final SmartDashesType? smartDashesType;
+  final SmartQuotesType? smartQuotesType;
+  final bool enableSuggestions;
+  final MaxLengthEnforcement? maxLengthEnforcement;
+  final int? maxLines;
+  final int? minLines;
+  final bool expands;
+  final int? maxLength;
+  final GestureTapCallback? onTap;
+  final VoidCallback? onEditingComplete;
+  final List<TextInputFormatter>? inputFormatters;
+  final double cursorWidth;
+  final double? cursorHeight;
+  final Radius? cursorRadius;
+  final Color? cursorColor;
+  final Brightness? keyboardAppearance;
+  final EdgeInsets scrollPadding;
+  final bool enableInteractiveSelection;
+  final InputCounterWidgetBuilder? buildCounter;
+  final ScrollPhysics? scrollPhysics;
+  final VoidCallback? onSubmitted;
+  final FocusNode? focusNode;
+  final Iterable<String>? autofillHints;
+  final MouseCursor? mouseCursor;
+  final AppPrivateCommandCallback? onAppPrivateCommand;
+  final String? restorationId;
+  final ScrollController? scrollController;
+  final TextSelectionControls? selectionControls;
+  final TextEditingController? controller;
+  final bool enableIMEPersonalizedLearning;
 
   @override
   Widget build(BuildContext context) {

@@ -53,4 +53,5 @@ class ProCrisColors {
     },
   );
   static const black = Color(0xFF46454D);
+  static const white = Color(0xFFFBFAFF);
 }

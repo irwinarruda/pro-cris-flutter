@@ -2,6 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class ProCrisLogo extends StatelessWidget {
+  const ProCrisLogo({
+    Key? key,
+    this.alignment,
+    this.padding,
+    this.decoration,
+    this.foregroundDecoration,
+    this.width,
+    this.height,
+    this.constraints,
+    this.margin,
+    this.transform,
+    this.transformAlignment,
+    this.clipBehavior = Clip.none,
+  }) : super(key: key);
+
   final String svgPath = 'assets/logos/pro-cris-logo.svg';
 
   final AlignmentGeometry? alignment;
@@ -15,22 +30,6 @@ class ProCrisLogo extends StatelessWidget {
   final double? width;
   final double? height;
   final Clip clipBehavior;
-  final Key? key;
-
-  const ProCrisLogo({
-    this.key,
-    this.alignment,
-    this.padding,
-    this.decoration,
-    this.foregroundDecoration,
-    this.width,
-    this.height,
-    this.constraints,
-    this.margin,
-    this.transform,
-    this.transformAlignment,
-    this.clipBehavior = Clip.none,
-  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +44,6 @@ class ProCrisLogo extends StatelessWidget {
       transformAlignment: transformAlignment,
       width: width,
       height: height,
-      key: key,
       child: SvgPicture.asset(
         svgPath,
         width: width,
