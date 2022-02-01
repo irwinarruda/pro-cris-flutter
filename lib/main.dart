@@ -4,6 +4,7 @@ import 'styles/theme_data.dart';
 
 import 'screens/sign_in/sign_in.dart';
 import 'screens/sign_up/sign_up.dart';
+import 'components/atoms/keyboard_dismiss.dart';
 
 void main() {
   runApp(const MyApp());

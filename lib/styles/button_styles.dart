@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:pro_cris_flutter/utils/base_size.dart';
 
 class ButtonStyles {

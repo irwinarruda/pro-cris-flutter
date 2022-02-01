@@ -31,6 +31,7 @@ class Link extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
+      height: 26,
       child: TextButton(
         onPressed: onPressed,
         onLongPress: onLongPress,
@@ -60,7 +61,7 @@ class Link extends StatelessWidget {
           ),
           shape: MaterialStateProperty.all(
             RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(10)),
+              borderRadius: BorderRadius.all(Radius.circular(5)),
             ),
           ),
         ),
