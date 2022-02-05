@@ -21,9 +21,11 @@ class _ProCrisBannerState extends State<ProCrisBanner> {
   Widget build(BuildContext context) {
     return AppBar(
       toolbarHeight: 130,
+      elevation: 0,
       title: ProCrisLogo(
         width: 235,
       ),
+      automaticallyImplyLeading: false,
       centerTitle: true,
     );
   }

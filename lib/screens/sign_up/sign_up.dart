@@ -62,6 +62,9 @@ class SignUp extends StatelessWidget with SignUpForm {
                     FormTextField(
                       label: 'Senha',
                       formControlName: 'password',
+                      obscureText: true,
+                      enableSuggestions: false,
+                      autocorrect: false,
                       size: BaseSize.lg,
                     ),
                     SizedBox(
@@ -70,6 +73,9 @@ class SignUp extends StatelessWidget with SignUpForm {
                     FormTextField(
                       label: 'Confirmar Senha',
                       formControlName: 'passwordConfirm',
+                      obscureText: true,
+                      enableSuggestions: false,
+                      autocorrect: false,
                       size: BaseSize.lg,
                     ),
                     SizedBox(

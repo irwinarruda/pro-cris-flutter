@@ -55,6 +55,9 @@ class SignIn extends StatelessWidget with SignInForm {
                     FormTextField(
                       label: 'Senha',
                       formControlName: 'password',
+                      obscureText: true,
+                      enableSuggestions: false,
+                      autocorrect: false,
                       size: BaseSize.lg,
                     ),
                     SizedBox(
@@ -63,7 +66,10 @@ class SignIn extends StatelessWidget with SignInForm {
                     Button(
                       text: 'Entrar',
                       size: BaseSize.lg,
-                      onPressed: () {},
+                      onPressed: () {
+                        print(form.value);
+                        print(form.control('email'));
+                      },
                     ),
                     SizedBox(
                       height: 5,

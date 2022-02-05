@@ -4,7 +4,45 @@ import 'package:reactive_forms/reactive_forms.dart';
 
 import 'package:pro_cris_flutter/styles/pro_cris_colors.dart';
 import 'package:pro_cris_flutter/utils/base_size.dart';
-import 'package:pro_cris_flutter/styles/text_field_styles.dart';
+
+class TextFieldStyles {
+  TextFieldStyles({
+    required this.labelFontSize,
+    required this.fontSize,
+    required this.height,
+    required this.padding,
+  });
+
+  double labelFontSize;
+  double fontSize;
+  double height;
+  EdgeInsets padding;
+
+  static final Map<BaseSize, TextFieldStyles> _styles = {
+    BaseSize.sm: TextFieldStyles(
+      labelFontSize: 14,
+      fontSize: 14,
+      height: 36,
+      padding: EdgeInsets.symmetric(horizontal: 14, vertical: 4),
+    ),
+    BaseSize.md: TextFieldStyles(
+      labelFontSize: 16,
+      fontSize: 16,
+      height: 40,
+      padding: EdgeInsets.symmetric(horizontal: 18, vertical: 4),
+    ),
+    BaseSize.lg: TextFieldStyles(
+      labelFontSize: 18,
+      fontSize: 16,
+      height: 45,
+      padding: EdgeInsets.symmetric(horizontal: 18, vertical: 4),
+    ),
+  };
+
+  static TextFieldStyles getStyles(BaseSize str) {
+    return _styles[str]!;
+  }
+}
 
 // ignore: must_be_immutable
 class FormTextField<T> extends StatelessWidget {
